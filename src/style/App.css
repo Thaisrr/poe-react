@@ -3,7 +3,8 @@
   padding: 30px;
   width: var(--width);
   margin: auto;
-  background-color: #FAF1FF;
+  background-color: var(--light);
+
 }
 
 .monspan {

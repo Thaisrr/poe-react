@@ -26,3 +26,16 @@ button {
   padding: 10px;
   border-radius: 5px;
 }
+
+.card  {
+  background-color: var(--warning);
+  color: var(--dark);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}

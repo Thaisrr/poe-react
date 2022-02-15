@@ -1,0 +1,27 @@
+.App {
+  text-align: left;
+  padding: 30px;
+  width: var(--width);
+  margin: auto;
+  background-color: #FAF1FF;
+}
+
+.monspan {
+  color: green;
+}
+
+h1 {
+  color: var(--main);
+}
+
+h2 {
+  color: var(--error);
+}
+
+button {
+  background-color: var(--dark);
+  color: var(--light);
+  border: solid 2px transparent;
+  padding: 10px;
+  border-radius: 5px;
+}

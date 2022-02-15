@@ -4,6 +4,7 @@ import Presentation from './pages/Presentation.js';
 import Routage from './pages/Routage.js';
 import Navigation from "./components/Navigation.js";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Static from './pages/Static.js';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Routes> {/* C'est à l'intérieur de cette balise que React va charger les routes */}
             <Route path="/" element={<Presentation/>} />
             <Route path="/routing" element={<Routage/>} />
+            <Route path='/static' element={<Static/>} />
           </Routes>
           {/*
           Sur certaines Doc anciennes, vous pourriez amenés à voir 

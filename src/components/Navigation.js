@@ -10,6 +10,9 @@ const Navigation = () => (
             <li>
                 <NavLink to="/routing">Routage</NavLink>
             </li>
+            <li>
+                <NavLink to="/static">Static</NavLink>
+            </li>
         </ul>
     </nav>
 

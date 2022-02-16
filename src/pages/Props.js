@@ -73,6 +73,7 @@ const Props = () => {
                     <h2>Test Bouton : </h2>
                     <div>
                         <Btn action={testBtn} loading={isLoading} txt={'Clic Clic'}/>
+                        <Btn action={testBtn} disabled={true} txt={'Clic Clic'}/>
                     </div>
                 </article>
 

@@ -1,4 +1,4 @@
-.spin {
+.bounce {
     border-radius: 50px;
     animation: loading linear infinite 800ms;
     display: block;
@@ -6,6 +6,7 @@
 }
 
 button {
+    box-sizing: content-box;
     min-width: 50px;
     min-height: 30px;
 }

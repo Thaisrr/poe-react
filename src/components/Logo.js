@@ -8,7 +8,7 @@ function Logo() {
             Les images affichées dans les JSX doivent se trouver
             -> dans le répertoire public
             */}
-            <img className="spin" alt="" src="images/logo192.png"/>
+            <img id="spin" alt="" src="images/logo192.png"/>
             <h1>Formation React</h1>
         </header>
  

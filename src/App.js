@@ -5,6 +5,8 @@ import Routage from './pages/Routage.js';
 import Navigation from "./components/Navigation.js";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Static from './pages/Static.js';
+import State from "./pages/State.js";
+import Props from "./pages/Props.js";
 
 function App() {
 
@@ -31,6 +33,8 @@ function App() {
             <Route path="/" element={<Presentation/>} />
             <Route path="/routing" element={<Routage/>} />
             <Route path='/static' element={<Static/>} />
+            <Route path='/hooks' element={<State/>} />
+            <Route path="/props" element={<Props/>} />
           </Routes>
           {/*
           Sur certaines Doc anciennes, vous pourriez amenés à voir 

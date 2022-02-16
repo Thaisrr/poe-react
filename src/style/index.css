@@ -4,7 +4,7 @@
   --warning: hsla(37, 100%, 73%, 1);
   --light: hsla(40, 88%, 97%, 1);
   --error: hsla(358, 99%, 71%, 1);
-  --dark: hsla(196, 63%, 16%, 1);
+  --dark: hsl(197, 62%, 11%);
 
   --width: 90%;
 

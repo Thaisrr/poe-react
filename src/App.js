@@ -3,10 +3,12 @@ import Logo from './components/Logo.js';
 import Presentation from './pages/Presentation.js';
 import Routage from './pages/Routage.js';
 import Navigation from "./components/Navigation.js";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Static from './pages/Static.js';
 import State from "./pages/State.js";
 import Props from "./pages/Props.js";
+import NotFound from "./pages/NotFound.js";
+import {BackBtn} from "./components/Buttons.js";
 
 function App() {
 
@@ -35,7 +37,12 @@ function App() {
             <Route path='/static' element={<Static/>} />
             <Route path='/hooks' element={<State/>} />
             <Route path="/props" element={<Props/>} />
+            <Route path="/accueil" element={<Navigate to="/" />} />
+            <Route path="/acceuil" element={<Navigate to="/" />} />
+            <Route path="*" element={<NotFound/>} />
           </Routes>
+
+            <BackBtn/>
           {/*
           Sur certaines Doc anciennes, vous pourriez amenés à voir 
           <Switch> à la place de <Routes>

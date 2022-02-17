@@ -4,7 +4,6 @@ import {Btn} from "../components/Buttons.js";
 const Connexion = () => {
    const [isLogged, updateLog] = useState(false);
 
-
     function getJSX() {
         if(!isLogged) return <p>Vous n'êtes pas connecté.e</p>
         else return <p>Bienvenue  ! </p>

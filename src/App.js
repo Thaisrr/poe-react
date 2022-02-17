@@ -10,6 +10,7 @@ import Props from "./pages/Props.js";
 import NotFound from "./pages/NotFound.js";
 import {BackBtn} from "./components/Buttons.js";
 import Connexion from "./pages/Connexion.js";
+import Effect from "./pages/Effect.js";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
             <Route path='/hooks' element={<State/>} />
             <Route path="/props" element={<Props/>} />
             <Route path="/login" element={<Connexion/>} />
+            <Route path="/effect" element={<Effect/>} />
             <Route path="/accueil" element={<Navigate to="/" />} />
             <Route path="/acceuil" element={<Navigate to="/" />} />
             <Route path="*" element={<NotFound/>} />

@@ -19,6 +19,12 @@ const Navigation = () => (
             <li>
                 <NavLink to="/props">Props</NavLink>
             </li>
+            <li>
+                <NavLink to="/nimportequoi">404</NavLink>
+            </li>
+            <li>
+                <NavLink to="/effect">Effect</NavLink>
+            </li>
         </ul>
     </nav>
 

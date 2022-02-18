@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import '../style/Navigation.css';
+import {useSelector} from "react-redux";
 
-const Navigation = () => (
+const Navigation = () => {
+    const basket = useSelector(state => state.basket.value)
+    return (
     <nav>
         <ul>
             <li>
@@ -34,10 +37,14 @@ const Navigation = () => (
             <li>
                 <NavLink to="/classe">Classe</NavLink>
             </li>
+            <li>
+                <NavLink to="/redux">Redux</NavLink>
+            </li>
+            <li>Panier : {basket}</li>
         </ul>
     </nav>
 
-);
+)};
 
 
 export default Navigation;

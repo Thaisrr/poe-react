@@ -13,6 +13,8 @@ import Connexion from "./pages/Connexion.js";
 import Effect from "./pages/Effect.js";
 import Requests from "./pages/Requests.js";
 import Forms from "./pages/Forms.js";
+import ClasseComponent from "./pages/ClasseComponent.js";
+import UserParam from "./pages/UserParam.js";
 
 function App() {
 
@@ -45,6 +47,8 @@ function App() {
             <Route path="/effect" element={<Effect/>} />
             <Route path="/requests" element={<Requests/>} />
             <Route path="/forms" element={<Forms/>} />
+            <Route path="/classe" element={<ClasseComponent/>} />
+              <Route path='/user/:id' element={<UserParam/>} />
             <Route path="/accueil" element={<Navigate to="/" />} />
             <Route path="/acceuil" element={<Navigate to="/" />} />
             <Route path="*" element={<NotFound/>} />

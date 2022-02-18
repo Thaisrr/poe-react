@@ -1,6 +1,8 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import ShowForm from "../components/ShowForm.js";
+import {NavLink} from "react-router-dom";
+import UserService from "../service/UserService.js";
 
 const Forms = () => {
     const [users, setUsers] = useState([]);
@@ -8,6 +10,10 @@ const Forms = () => {
     const getUsers = () => {
         axios.get(api_url)
             .then(res => setUsers(res.data))
+    }
+
+    const getUserBis = () => {
+        UserService.getUser().then(u => setUsers(u));
     }
 
     const createUser = (user) => {
@@ -41,7 +47,14 @@ const Forms = () => {
                 <h2>Users</h2>
                 <div className="grid">
                     {
-                        users.map(u => <div key={u.id} className="card">{u.name}</div> )
+                        users.map(u =>
+                            <div key={u.id} className="card">
+                                <h3>{u.name}</h3>
+                                <p>
+                                    <NavLink to={'/user/' + u.id}>Profil</NavLink>
+                                </p>
+                            </div>
+                        )
                     }
                 </div>
 

@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id" : 1,
+      "name" : "Jane Doe",
+      "email" : "jdoe@mail.fr"
+    },
+    {
+      "id" : 2,
+      "name" : "Jean Michel LaTourte",
+      "email" : "jmtourte@mail.fr"
+    }
+  ]
+
+}

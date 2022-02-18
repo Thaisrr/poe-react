@@ -25,6 +25,12 @@ const Navigation = () => (
             <li>
                 <NavLink to="/effect">Effect</NavLink>
             </li>
+            <li>
+                <NavLink to="/requests">Request</NavLink>
+            </li>
+            <li>
+                <NavLink to="/forms">Forms</NavLink>
+            </li>
         </ul>
     </nav>
 

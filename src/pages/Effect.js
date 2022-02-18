@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import {clear} from "@testing-library/user-event/dist/clear.js";
 
 const Effect = () => {
     const [counter, setCounter] = useState(0);

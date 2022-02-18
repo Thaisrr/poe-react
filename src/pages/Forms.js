@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import logo from "../components/Logo.js";
+import ShowForm from "../components/ShowForm.js";
 
 const Forms = () => {
     const [users, setUsers] = useState([]);
@@ -12,8 +12,22 @@ const Forms = () => {
 
     const createUser = (user) => {
         axios.post(api_url, user)
-            .then(res => console.log(res))
-            .catch(err => alert('Nope !'))
+            .then( () => getUsers()) // On relance la requête pour afficher notre nouveau user
+            .catch(err => {
+                console.error(err);
+                alert('Nope !');
+            })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target; // un tableau avec les inputs
+        const name = form[0].value; // valeur du 1er input du form ( dans l'ordre du HTML )
+        const email = form[1].value;
+        const user = {name, email}; // equivalent à {name: name, email: email}
+        createUser(user);
+        form[0].value = '';
+        form[1].value = '';
     }
 
     useEffect(() => {
@@ -30,9 +44,11 @@ const Forms = () => {
                         users.map(u => <div key={u.id} className="card">{u.name}</div> )
                     }
                 </div>
+
+                <h2>Form : </h2>
                 <fieldset>
                     <legend>Nouvel.le utilisateur.trice</legend>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <p>
                             <label htmlFor="name">Nom</label>
                             <input id="name"/>
@@ -46,6 +62,7 @@ const Forms = () => {
                         </p>
                     </form>
                 </fieldset>
+                <ShowForm create={createUser}/>
             </main>
         </>
     )
